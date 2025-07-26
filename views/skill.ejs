@@ -1,0 +1,102 @@
+<%- include('partials/header') %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Skills</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <style>
+  
+    .container {
+ 
+      padding: 30px 40px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #2a2a2a;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    #skillDisplay {
+      font-size: 22px;
+      color: #007BFF;
+      font-weight: bold;
+      margin-top: 20px;
+      min-height: 30px;
+    }
+
+    button {
+      padding: 12px 25px;
+      background: linear-gradient(135deg, #6c63ff, #a66cff);
+      border: none;
+      border-radius: 30px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: linear-gradient(135deg, #5b57e0, #9b59ff);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>My Skillset</h1>
+    <p>
+      I believe in continuously learning and upgrading my skills to stay relevant in the tech world.
+    </p>
+   <p><strong>Programming Languages : </strong> C,C++,Java,Python,JavaScript</p>
+    <p><strong>Web Dev(Frontend):</strong>HTML,CSS,React(On-Going)</p>
+     <p><strong>Web Dev(Backend):</strong>Nodejs,Expressjs,SpringBoot</p>
+    
+    <p><strong>Other:</strong>Data Structure & Algorithm , Git</p>
+    <p><strong>Databases:</strong>SQL, MongoDB, PostgreSQL</p>
+    <p><strong>IDEs:</strong>VS Code,IntelliJ IDEA, PyCharm, NetBeans</p>
+
+    <button onclick="generateSkill()">Click to reveal More!</button>
+    <div id="skillDisplay"></div>
+  </div>
+
+  <script>
+   const skills = [
+  "Communication",
+  "Teamwork",
+  "Leadership",
+  "Time Management",
+  "Problem Solving",
+  "Adaptability",
+  "Creativity",
+  "Critical Thinking",
+  "Event Planning",
+  "Public Speaking",
+  "Content Creation",
+  "Conflict Resolution",
+  "Emotional Intelligence",
+  "Attention to Detail",
+  "Multitasking",
+  "Decision Making"
+];
+
+
+    function generateSkill() {
+      const randomIndex = Math.floor(Math.random() * skills.length);
+      document.getElementById("skillDisplay").innerText = skills[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
+
+
+<%- include('partials/footer') %>

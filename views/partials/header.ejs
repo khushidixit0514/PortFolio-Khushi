@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Khushi Dixit | Portfolio</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+<body>
+  <header>
+        <div class="header-container">
+            <div class="profile-section">
+                <img src="/photo.jpeg" alt="Khushi Dixit Photograph" class="profile-pic">
+                <div class="profile-text">
+                    <h1>Khushi Dixit</h1>
+                    <div class="social-links">
+                      <p>To learn, to experience, and to stay consistent — that’s what I believe in.</p>
+
+                        <a href="https://www.linkedin.com/in/khushi-dixit-19257021a/" target="_blank">
+                     <i class="fab fa-linkedin"></i> LinkedIn
+                              </a> ||
+<a href="https://leetcode.com/u/khushidixit0514/" target="_blank">
+  <i class="fas fa-code"></i> LeetCode
+</a>  ||
+<a href="https://github.com/khushidixit0514" target="_blank">
+  <i class="fab fa-github"></i> GitHub
+</a> <br>
+<a href="https://drive.google.com/file/d/1sJwgE2DM-RbvcQZ4PSX6a5HJPrMYCWV_/view?usp=drivesdk" target="_blank">
+  <i class="fas fa-file-alt"></i> Resume
+</a>
+  </div>
+
+                </div>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="/" class="<%= activePage === 'home' ? 'active' : '' %>">Home</a></li>
+                    <li><a href="/introduction" class="<%= activePage === 'introduction' ? 'active' : '' %>">Introduction</a></li>
+                    <li><a href="/achievement" class="<%= activePage === 'achievement' ? 'active' : '' %>">Achievements</a></li>
+                    <li><a href="/skill" class="<%= activePage === 'skill' ? 'active' : '' %>">Skills</a></li>
+                    <li><a href="/experience" class="<%= activePage === 'experience' ? 'active' : '' %>">Experience</a></li>
+                 <li><a href="/projects" class="<%= activePage === 'projects' ? 'projects' : '' %>">projects</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+  <main>

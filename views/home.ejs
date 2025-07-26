@@ -1,0 +1,61 @@
+<%- include('partials/header') %>
+
+ <div class="bg-image">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0a497600-737c-4c3b-9add-33bf33535ddb.png" alt="Professional workspace with laptop, glasses, and notebook on a wooden desk, soft blurred background with warm lighting" style="display:none;">
+    </div>
+    
+    <div class="main-content">
+        <div class="text-container">
+            <p>I'm a 4th Year Compter Science Student looking for an internship or Job Opportunities in the field of</p>
+            <div class="dynamic-text">
+                <span id="dynamic"></span>
+            </div>
+        </div>
+        <div class="education">
+            <p>VIDYA MANDIR PUBLIC SCHOOL</p>
+         
+               Xth Standard-98% (School Topper)<br>
+                XIIth Standard-93.6% (Class Topper)
+            
+            <p>UNIVERSITY INSTITUTE OF ENGINEERING AND TECHNOLOGY,KURUKSHETRA UNIVERSITY</p>
+          
+                CSE(9.1 CGPA in last SEM)
+           
+        </div>
+        <button class="swipe-btn" id="swipeBtn"  ><a href="/introduction" >Swipe Right →</a></button>
+    </div>
+     
+    <script>
+        // Text animation
+        const textArray = ["Web Development", "Software Engineering"];
+        const typingDelay = 200;
+        const erasingDelay = 100;
+        const newTextDelay = 2000;
+        let textArrayIndex = 0;
+        let charIndex = 0;
+        const dynamicText = document.getElementById("dynamic");
+        function typeText() {
+            if (charIndex < textArray[textArrayIndex].length) {
+                dynamicText.textContent += textArray[textArrayIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(typeText, typingDelay);
+            } else{
+                setTimeout(eraseText, newTextDelay);
+            }
+        }
+        function eraseText() {
+            if (charIndex > 0) {
+                dynamicText.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(eraseText, erasingDelay);
+            } else {
+                textArrayIndex = (textArrayIndex + 1) % textArray.length;
+                setTimeout(typeText, typingDelay + 1100);
+            }
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(typeText, newTextDelay + 250);
+        });
+        
+    </script>
+<%- include('partials/footer') %>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <footer>
+<hr>
+
+
+    <!--FOOTER PART-1-->
+   <main class="container mx-auto p-4 min-h-screen">
+    <!-- Main content would go here -->
+    <div class="text-center py-20">
+      <h1 class="text-4xl font-bold">My Preferred Work Locations </h1>
+      <p class="mt-4 text-lg">Check out the cities where I'm open to job opportunities</p>
+    </div>
+  </main>
+  <footer class="border-t-2 pt-8">
+   
+
+
+
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="relative">
+        <!-- Simplified India Map SVG -->
+       <img src="/indiamap.png" alt="india map" height="30%" width="30%"/>
+      </div> <br>
+ <p><em><b>HARYANA || DELHI || CHANDIGARH</b></em> </p> 
+ <br>
+      <hr>
+  </footer>
+
+    <!--END OF FOOTER PART1-->>
+
+    <!--FOOTER PART-2-->>
+  <!-- Contact Info -->
+  <div class="footer-section">
+    <h3>Contact Details</h3>
+    <p>Email: <a href="mailto:khushidixit00514@gmail.com">khushidixit00514@gmail.com</a></p>
+    <p>Phone: <a href="tel:+919811796408">+91 9811796408</a></p>
+  </div>
+
+  <!-- Google Form -->
+  <!-- Contact Button -->
+<div class="footer-section">
+  <h3>Let's Connect</h3>
+  <p>Have a question, opportunity, or just want to say hi? Fill out the form below — I'd love to hear from you!</p>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSf3-L2-DvQI9j49T3BzMimUyrrhUkTbaC3pThLXezbgY9PHzw/viewform?usp=header" 
+     target="_blank" 
+     rel="noopener noreferrer">
+    <button style="padding: 10px 20px; font-size: 16px; border-radius: 5px; border: none; background-color: #4CAF50; color: white; cursor: pointer;">
+      Start a Conversation!
+    </button>
+  </a>
+</div>
+
+
+  <!-- Portfolio Info + Scroll Button + Message -->
+  <div class="footer-section">
+<p><em>This portfolio is a small piece of my journey — built with curiosity, mistakes, and lots of late-night learning.</em></p>
+<p>~Khushi Dixit</p>
+    <button onclick="scrollToTop()" class="scroll-btn">Back to Top ↑</button>
+  </div>
+
+
+
+
+
+
+
+
+</footer>
+
+<script>
+
+  //1ST PART
+  // Simple toggle functionality for visited places
+    document.addEventListener('DOMContentLoaded', function() {
+      const visitedPlaces = {
+        delhi: "Delhi - Visited in 2019",
+        mumbai: "Mumbai - Visited in 2020", 
+        bangalore: "Bangalore - Visited in 2021"
+      };
+      
+      // Toggle city names on click and position info box
+      document.querySelectorAll('.state.visited').forEach(state => {
+        state.addEventListener('click', function(e) {
+          const infoBox = document.getElementById('info-box');
+          const cityName = document.getElementById('city-name');
+          
+          // Position near clicked point
+          const x = e.clientX;
+          const y = e.clientY;
+          infoBox.style.left = `${x}px`;
+          infoBox.style.top = `${y}px`;
+          
+          cityName.textContent = visitedPlaces[this.id];
+          infoBox.style.display = 'block';
+          
+          // Close when clicking anywhere else
+          document.addEventListener('click', function closeBox(e) {
+            if (!e.target.closest('.state') && !e.target.closest('.info-box')) {
+ infoBox.style.display = 'none';
+              document.removeEventListener('click', closeBox);
+            }
+          });
+        });
+      });
+    });
+
+
+//2ND PART
+
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+</script>
+
+</body>
+</html>

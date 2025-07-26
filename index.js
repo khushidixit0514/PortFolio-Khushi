@@ -1,0 +1,1 @@
+ <img src="/map.webp" width="100%" height="50%" />

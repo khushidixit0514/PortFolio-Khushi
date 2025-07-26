@@ -1,0 +1,373 @@
+
+        :root {
+            --primary-color: #3a5a78;
+            --secondary-color: #2c3e50;
+            --accent-color: #3498db;
+            --text-color: #2c3e50;
+            --light-bg: #ecf0f1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', 'Segoe UI', sans-serif;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--light-bg) 0%, white 100%);
+            padding: 1.5rem 2rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 2rem;
+        }
+
+        .profile-section {
+            display: flex;
+            align-items: center;
+            flex: 1;
+        }
+
+        .profile-pic {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent-color);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            margin-right: 1.5rem;
+        }
+
+        .profile-text {
+            padding-right: 1rem;
+        }
+
+        .profile-text h1 {
+            color: var(--secondary-color);
+            text-transform: uppercase;
+            font-size: 1.6rem;
+            letter-spacing: 1.2px;
+            margin-bottom: 0.3rem;
+            font-weight: 700;
+        }
+
+        .profile-text p {
+            color: var(--text-color);
+            font-size: 0.85rem;
+            line-height: 1.4;
+            max-width: 400px;
+            font-weight: 500;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+            list-style: none;
+        }
+
+        .nav-links li {
+            position: relative;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links a:hover {
+            color: white;
+            background-color: var(--accent-color);
+        }
+
+        .nav-links a.active {
+            color: white;
+            background-color: var(--primary-color);
+        }
+
+        /* Responsive styles */
+        @media (max-width: 900px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .profile-section {
+                width: 100%;
+                justify-content: center;
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+            
+            .profile-pic {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+            
+            nav {
+                width: 100%;
+            }
+            
+            .nav-links {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .profile-section {
+                flex-direction: column;
+            }
+            
+            .profile-pic {
+                margin-right: 0;
+                margin-bottom: 0.5rem;
+            }
+            
+            .nav-links a {
+                padding: 0.4rem 0.6rem;
+                font-size: 0.8rem;
+            }
+        }
+ /* Footer css-1 */
+
+
+ /* Footer css-2 */
+
+        footer {
+  background-color: #f9f9f9;
+  padding: 30px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  color: #444;
+}
+
+.footer-section {
+  margin-bottom: 30px;
+}
+
+footer a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.scroll-btn {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.scroll-btn:hover {
+  background-color: #005fa3;
+}
+
+
+/*HOME PAGE CSS*/
+     
+        body {
+         
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .bg-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+ background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                              url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ed19de88-8b8e-437b-9a4c-02aa41c69a83.png');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+       
+         .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .text-container {
+            margin-bottom: 40px;
+        }
+        .text-container {
+            font-family: 'Montserrat', 'Segoe UI', sans-serif;
+            color: white;
+            font-size: 25px;
+             margin-top: 3.6px; 
+
+        }
+        .dynamic-text {
+            font-size: 2.5rem;
+            color: #4fc3f7;
+            min-height: 80px;
+            position: relative;
+        }
+        .dynamic-text span {
+            position: relative;
+        }
+        .dynamic-text span::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            border-left: 2px solid #4fc3f7;
+            animation: 0.5s steps(5) infinite;
+        }
+         @keyframes typing {
+            40%, 60% {
+                left: 100%;
+            }
+            100% {
+                left: 0%;
+            }
+        }
+        .education {
+           margin-top: 0.4px; 
+            font-size: 1.1rem;
+            line-height: 1.6;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 15px;
+            border-radius: 5px;
+        }
+         .swipe-btn {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            background: linear-gradient(45deg, #4fc3f7, #1565c0);
+            color: white; 
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+        .swipe-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+            background: linear-gradient(45deg, #1565c0, #4fc3f7);
+        }
+
+        /*ACHIEVEMENT PAGE CSS*/
+       
+#experience-section {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+#experience-section h2 {
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  color: #0a0808;
+}
+
+#experience-section h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  color: #444;
+}
+
+#experience-section p,
+#experience-section li {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+#experience-section ul {
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
+#introduction-achievement {
+    
+   position: absolute;
+  right: 20px;
+  bottom: 0%;
+}
+#introduction-home {
+     position: absolute;
+  left: 20px;
+  bottom: 0px;
+ 
+}
+/*EXPERIENCE PAGE*/
+.experience-container {
+  margin: 50px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.experience-container h2 {
+  color: #2c3e50;
+  margin-top: 20px;
+}
+
+.experience-container p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background-color: #0077cc;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #005fa3;
+}

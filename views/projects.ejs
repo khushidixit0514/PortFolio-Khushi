@@ -1,0 +1,182 @@
+<%- include('partials/header') %>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Projects</title>
+    <style>
+      body {
+        font-family: "Segoe UI", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f0f4f8;
+        color: #333;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 2.5rem;
+      }
+
+      .project {
+        background: #fff;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .project:hover {
+        background: #e6f0ff;
+      }
+
+      .project h2 {
+        margin: 0;
+        font-size: 1.5rem;
+      }
+
+      .content {
+        display: none;
+        padding-top: 15px;
+      }
+
+      .btns {
+        margin-top: 10px;
+      }
+
+      .btns a {
+        text-decoration: none;
+        background: #007bff;
+        color: white;
+        padding: 8px 14px;
+        border-radius: 6px;
+        margin-right: 10px;
+        transition: background 0.3s;
+      }
+
+      .btns a:hover {
+        background: #0056b3;
+      }
+
+      .coming-soon {
+        text-align: center;
+        margin-top: 40px;
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: #888;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>My Projects</h1>
+
+      <div class="project" onclick="toggleContent(this)">
+        <h2>1. IT-Ticketing System</h2>
+        <div class="content">
+          <p>
+           A MERN Stack-based internal complaint management system developed during my internship at StarWire (India) Ltd.. The platform allows employees to register IT-related issues, which are then assigned to the relevant department. The system tracks details like complaint time, resolution time, and generates slips upon completion. Admins monitor and manage the workflow, ensuring transparency and efficiency.
+I contributed to full backend development and handled parts of the frontend under the guidance of Somnath Sir.<br>
+➡️ Since my main contribution was on the backend, I’m sharing the backend code only.
+          </p><br>
+          <div class="btns">
+            <a
+              href="https://github.com/khushidixit0514/mycontacts-backend.git"
+              target="_blank"
+              >View Code</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="project" onclick="toggleContent(this)">
+        <h2>2. Nirvrti – Peace Begins Within</h2>
+        <div class="content">
+          <p>
+            A mental wellness platform
+            developed using HTML, CSS, JavaScript, Node.js, and MongoDB. Nirvrti
+            helps users heal emotionally through features like an Anonymous
+            Writing Space, 1-Minute Reset tools, Time Capsule to Self, and
+            Mental Detox Activities. It tailors content based on the user's
+            selected issues (e.g., breakup, family stress) using basic AI logic.
+            The platform focuses on privacy, user comfort, and self-reflection,
+            encouraging users to reconnect with themselves and find peace
+            within.
+          </p><br>
+          <div class="btns">
+            <a
+              href="https://github.com/khushidixit0514/Nirvrti-Peace-Begins-Within.git"
+              target="_blank"
+              >View Code</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="project" onclick="toggleContent(this)">
+        <h2>3.Flappy Bird – Java Game Application (Recreation)</h2>
+        <div class="content">
+          <p>
+            A fun and interactive game developed using Java Swing, replicating
+            the popular Flappy Bird mechanics. The game features smooth
+            graphics, collision detection, and increasing difficulty levels to
+            engage users. It was built to enhance my understanding of
+            Object-Oriented Programming and GUI development in Java. This
+            project reflects my interest in building logic-driven, visually
+            engaging applications.
+          </p>
+          <br />
+          <div class="btns">
+            <a
+              href="https://github.com/khushidixit0514/FlappyBird.git"
+              target="_blank"
+              >View Code</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="project" onclick="toggleContent(this)">
+        <h2>4.Portfolio – Showcasing My Tech Journey</h2>
+        <div class="content">
+          <p>
+            A personal portfolio website created using HTML, CSS, and
+            JavaScript, with Node.js and Express.js integration. It highlights
+            my skills, experiences, projects, and achievements. This dynamic and
+            responsive site allows visitors to explore my journey, download
+            certificates, view project links, and connect with me. Designed with
+            a focus on clean UI/UX and accessibility, it reflects both my
+            technical and creative abilities as a web developer.
+          </p>
+        </div>
+      </div>
+
+      <div class="coming-soon">🚀 More Coming Soon!</div>
+    </div>
+
+    <script>
+      function toggleContent(project) {
+        const content = project.querySelector(".content");
+        const allContents = document.querySelectorAll(".content");
+        allContents.forEach((c) => {
+          if (c !== content) c.style.display = "none";
+        });
+        content.style.display =
+          content.style.display === "block" ? "none" : "block";
+      }
+    </script>
+  </body>
+</html>
+
+<%- include('partials/footer') %>
